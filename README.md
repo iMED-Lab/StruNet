@@ -45,21 +45,21 @@ Prepare your data
 Please put the root directory of your dataset into the folder ./datasets. Then the subfolder for each dataset can be organized as follows. 
 
 |-- datasets<br>
-    |-- CT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- CT<br>
         |-- train<br>
             |-- 1E4<br>
             |-- high<br>
         |-- test<br>
             |-- 1E4<br>
             |-- high<br>
-    |-- OCT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- OCT<br>
         |-- train<br>
             |-- images<br>
             |-- labels<br>
         |-- test<br>
             |-- images<br>
             |-- labels<br>
-    |-- OCTA<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- OCTA<br>
         |-- train<br>
             |-- low<br>
             |-- high<br>
