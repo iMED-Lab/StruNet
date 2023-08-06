@@ -7,10 +7,10 @@ parser = argparse.ArgumentParser(description="DenoiseNet")
 
 parser.add_argument("--gpu_ids", type=str, default="0", help="device")
 parser.add_argument("--dataset", type=str, default="CT", choices=["CT", "OCT", "OCTA"], help="dataset")
-parser.add_argument("--data_dir", type=str, default=".", help="path to folder for getting dataset")
+parser.add_argument("--data_dir", type=str, default="./datasets/CT", help="path to folder for getting dataset")
 parser.add_argument("--scale_size", type=int, default=512, help="scale size")
 parser.add_argument("--model", type=str, default="vgg19", choices=["vgg16", "vgg19"], help="model")
-parser.add_argument("--name", type=str, default="U-Net", help="name of model")
+parser.add_argument("--name", type=str, default="StruNet", help="name of model")
 
 parser.add_argument("--batch_size", type=int, default=1, help="batch size")
 parser.add_argument("--num_workers", type=int, default=0, help="number of threads")  # 64##
@@ -30,13 +30,13 @@ parser.add_argument('--isSwinT', action='store_true', help='use swin transformer
 
 parser.add_argument("--window_size", type=int, default=2, help="window size")
 parser.add_argument("--weight_l1", type=float, default=1.0, help="weight of L1 loss")
-parser.add_argument("--weight_percept", type=float, default=0.05, help="weight of perceptual loss")  # 0.1##
-parser.add_argument("--weight_rank", type=float, default=0.0001, help="weight of rank regularization")  # 0.002##
+parser.add_argument("--weight_percept", type=float, default=0.05, help="weight of perceptual loss")
+parser.add_argument("--weight_rank", type=float, default=0.0001, help="weight of rank regularization")
 parser.add_argument("--eps", type=float, default=0.005, help="threshold of rank regularization")
 
 parser.add_argument("--logs_dir", type=str, default="logs", help="path to folder for saving logs")
 parser.add_argument("--models_dir", type=str, default="models", help="path to folder for saving enhancement/degradation models")
 parser.add_argument("--results_dir", type=str, default="results", help="path to folder for saving enhancement/degradation results")
-parser.add_argument("--load_model", type=str, default="", help="model to be loaded")  # best-best.pth##
+parser.add_argument("--load_model", type=str, default="best-best.pth", help="model to be loaded")
 
 args = parser.parse_args()
